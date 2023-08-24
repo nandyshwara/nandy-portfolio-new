@@ -1,6 +1,7 @@
 import AboutMe from "../components/AboutMe";
 import Banner from "../components/Banner";
 import Clients from "../components/Clients";
+import ContactMe from "../components/ContactMe";
 import LetsBuild from "../components/LetsBuild";
 import Portfolio from "../components/Portfolio";
 import SkillsMarquee from "../components/SkillsMarquee";
@@ -16,6 +17,7 @@ export default function Home(){
             <Portfolio />
             <Clients/>
             <LetsBuild />
+            <ContactMe/>
         </div>
     )
 }

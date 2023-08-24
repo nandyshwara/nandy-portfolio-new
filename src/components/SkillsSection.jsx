@@ -25,7 +25,7 @@ export default function SkillsSection() {
     },
   ];
   return (
-    <div className="bg-[#19191D] text-color-two">
+    <div className="bg-[#19191D] text-color-two" id="skillSection">
       <Container>
         <div className="py-5 px-10">
           <p className="text-6xl font-semibold text-color-two">

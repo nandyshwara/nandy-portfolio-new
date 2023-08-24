@@ -1,81 +1,72 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import Container from "./Container";
-import portfolioImage1 from "../assets/imgs/portfolioImage1.png";
-import portfolioImage2 from "../assets/imgs/portfolioImage2.png";
-import portfolioImage3 from "../assets/imgs/portfolioImage3.png";
-import portfolioImage4 from "../assets/imgs/portfolioImage4.png";
-import portfolioImage5 from "../assets/imgs/portfolioImage5.png";
-import portfolioImage6 from "../assets/imgs/portfolioImage6.png";
-import portfolioImage7 from "../assets/imgs/portfolioImage7.png";
-import portfolioImage8 from "../assets/imgs/portfolioImage8.png";
-import portfolioImage9 from "../assets/imgs/portfolioImage9.png";
-import portfolioImage10 from "../assets/imgs/portfolioImage10.png";
-import portfolioImage11 from "../assets/imgs/portfolioImage11.png";
-import portfolioImage12 from "../assets/imgs/portfolioImage12.png";
-import portfolioImage13 from "../assets/imgs/portfolioImage13.png";
+import portfolioImage1 from "../assets/imgs/biAcademyImage.png";
+import portfolioImage2 from "../assets/imgs/tryRabbitImage.png";
+import portfolioImage3 from "../assets/imgs/akshayPortfolioImage.png";
+import portfolioImage4 from "../assets/imgs/sharavariPortfolioImage.png";
+import circleImage from "../assets/svgs/circle.svg";
 
 export default function Portfolio() {
   const projectData = [
     {
-        image: portfolioImage1,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage2,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage3,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage4,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage5,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage6,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage7,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage8,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage9,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage10,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage11,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage12,
-        crop: { x: 0, y: 100},
-      },
-      {
-        image: portfolioImage13,
-        crop: { x: 0, y: 100},
-      },
+      image: portfolioImage1,
+      title: "Bi Academy",
+      description:
+        "It is Half LMS and Course Landing Page , which have E-books and mock tests included.Here they sell various courses and career assistance services and mocket tests.Complete Branding ,Content writing , Design , Development(front-end and Back-end) , Deployment has been done.I have implemented both payment and whatsapp integration as well.",
+      toolsUsed: [
+        "Figma",
+        "React JS",
+        "Node JS",
+        "Mongo DB",
+        "Cloudinary",
+        "Razorpay",
+        "Twilio",
+        "TailwindCSS",
+      ],
+    },
+    {
+      image: portfolioImage2,
+      title: "TryRabbit",
+      description:
+        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
+      toolsUsed: [
+        "React JS",
+        "Node JS",
+        "Mongo DB",
+        "Cloudinary",
+        "TailwindCSS",
+      ],
+    },
+    {
+      title: "Akshay Portfolio Website",
+      image: portfolioImage3,
+      description:
+        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
+      toolsUsed: [
+        "React JS",
+        "Node JS",
+        "Mongo DB",
+        "Cloudinary",
+        "TailwindCSS",
+      ],
+    },
+    {
+      title: "Sharavari Portfolio Website",
+      image: portfolioImage4,
+      description:
+        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
+      toolsUsed: [
+        "React JS",
+        "Node JS",
+        "Mongo DB",
+        "Cloudinary",
+        "TailwindCSS",
+      ],
+    },
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-10" id="portfolio">
       <Container>
         <div className="text-6xl text-center font-bold">
           <p className="text-color-one">I create websites</p>
@@ -85,51 +76,47 @@ export default function Portfolio() {
           <p className="text-color-two">
             My <span className="text-color-one">Works</span>
           </p>
-          <Carousel
-            renderArrowPrev={(clickHandler, hasPrev) => {
-              return (
-                <div
-                  className={`${
-                    hasPrev ? "absolute" : "hidden"
-                  } top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-100 hover:opacity-30 cursor-pointer z-20`}
-                  onClick={clickHandler}
-                >
-                  <AiOutlineArrowLeft className="w-9 h-9 text-white" />
-                </div>
-              );
-            }}
-            renderArrowNext={(clickHandler, hasNext) => {
-              return (
-                <div
-                  className={`${
-                    hasNext ? "absolute" : "hidden"
-                  } top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-100 hover:opacity-30 cursor-pointer z-20`}
-                  onClick={clickHandler}
-                >
-                  <AiOutlineArrowRight className="w-9 h-9 text-white" />
-                </div>
-              );
-            }}
-            swipeable={true}
-            className="px-1 sm:px-10"
-          >
+          <div className="flex flex-col w-full gap-y-10 mt-10">
             {projectData.map((currEle, index) => {
               return (
-                <div className="mt-10" key={index} style={{ overflow: "hidden", width: "100%", height: "100%" }}>
-                  <img
-                    src={currEle.image}
-                    alt={`portfolioImage-${index}`}
-                    style={{
-                      objectFit: "cover",
-                      width: "80%",
-                      height: "100%",
-                      transform: `translate(-${currEle.crop.x}px, -${currEle.crop.y}px)`,
-                    }}
-                  />
+                <div className="bg-[#19191D] w-10/12 border border-[#FF8E5E] flex flex-row py-10 px-5 mx-auto rounded-2xl transition-transform transform-gpu hover:scale-105 cursor-pointer">
+                  <div className="basis-1/2 h-[300px] w-[400px] my-auto">
+                    <img
+                      className="w-full h-full my-auto"
+                      src={currEle.image}
+                      alt={currEle.image}
+                    />
+                  </div>
+                  <div className="basis-1/2">
+                    <p className="text-4xl font-semibold text-color-one">
+                      {currEle.title}
+                    </p>
+                    <p className="text-sm font-normal text-color-two text-left mt-10 px-10">
+                      {currEle.description}
+                    </p>
+                    <p className="text-color-one text-xl font-bold text-left px-10 pt-5">Tools And Technologies Used:</p>
+                    <div className="grid grid-cols-3 gap-x-10 gap-y-5 mt-5 text-color-two px-10 py-1">
+                      {currEle.toolsUsed.map((element) => {
+                        return (
+                         
+                            
+                            <div className="h-3 flex flex-row gap-5 text-xs">
+                            <img
+                              className="h-3"
+                              src={circleImage}
+                              alt="circleImage"
+                            />
+                            <p>{element}</p>
+                          </div>
+                        
+                        );
+                      })}
+                    </div>
+                  </div>
                 </div>
               );
             })}
-          </Carousel>
+          </div>
         </div>
       </Container>
     </div>

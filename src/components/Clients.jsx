@@ -5,7 +5,7 @@ import optum from "../assets/imgs/optum.png"
 import transcurators from "../assets/imgs/transcurators.png"
 export default function Clients(){
     return(
-        <div className="bg-[#19191D] my-10 py-10">
+        <div className="bg-[#19191D] mt-10 mb-0 py-10">
             <p className="text-4xl font-bold text-color-one text-center pb-10">Organizations And Clients</p>
             <Marquee>
                 <img className="h-12 mr-10" src={biAcademy} alt="companyImages"/>

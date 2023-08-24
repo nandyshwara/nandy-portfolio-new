@@ -12,7 +12,7 @@ export default function AboutMe() {
     "WEB SCRAPING"
   ]
   return (
-    <div className="mt-[4rem]">
+    <div className="mt-[4rem]" id="aboutMe">
       <Container>
         <div className="flex flex-row gap-[100px] p-10">
           <div className="text-3xl font-semibold text-color-two basis-1/2">
