@@ -34,7 +34,7 @@ export default function Navbar({ user, setRender, setUser }) {
             <img
               src={Logo}
               alt="nandyLogo"
-              className="h-auto object-center select-none cursor-pointer"
+              className="h-auto object-center select-none cursor-pointer mx-auto sm:mx-0"
             />
             <div className="hidden md:flex flex-row items-center space-x-10 text-xl">
               {navOptions.map((currElem, index) => (
@@ -48,7 +48,7 @@ export default function Navbar({ user, setRender, setUser }) {
                 </Link>
               ))}
             </div>
-            <div className="text-xl font-semibold border border-white rounded-3xl">
+            <div className="hidden md:flex text-xl font-semibold border border-white rounded-3xl">
               <p className="px-3 py-1">Download CV</p>
             </div>
           </div>

@@ -4,11 +4,11 @@ import starImage from "../assets/svgs/star.svg";
 
 export default function SkillsMarquee() {
   return (
-    <div className="bg-white" style={slantedContainerStyle}>
+    <div className="bg-white mt-10" style={slantedContainerStyle}>
       <Marquee>
         <div className="marquee-content my-auto">
           {skillsRoll.map((element) => (
-            <p className="text-3xl font-bold flex flex-row py-5" key={element}>
+            <p className="text-lg md:text-3xl font-bold flex flex-row py-2 md:py-5" key={element}>
               <img className="mx-5" src={starImage} alt="starImage" />
               {element}
               <img className="mx-5" src={starImage} alt="starImage" />

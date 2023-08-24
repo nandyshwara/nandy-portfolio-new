@@ -67,10 +67,10 @@ export default function ContactMe() {
           Contact Me
         </h2>
 
-        <div className="bg-[#19191D] py-10 px-10 text-white mt-10 w-1/2 mx-auto rounded-2xl">
+        <div className="bg-[#19191D] py-10 px-10 text-white mt-10 w-full md:w-1/2 mx-auto rounded-2xl">
           <form onSubmit={handleSubmit} id="contactForm">
             <div className="mb-4">
-              <label htmlFor="name" className="block text-xl font-medium">
+              <label htmlFor="name" className="block text-sm md:text-xl font-medium">
                 Name
               </label>
               <input
@@ -78,13 +78,13 @@ export default function ContactMe() {
                 id="name"
                 name="name"
                 placeholder="Enter your name"
-                className="w-full py-4 px-3 bg-white text-black rounded-md"
+                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md"
                 value={formData.name}
                 onChange={handleInputChange}
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="phone" className="block text-xl font-medium">
+              <label htmlFor="phone" className="block text-sm md:text-xl font-medium">
                 Phone Number
               </label>
               <input
@@ -92,13 +92,13 @@ export default function ContactMe() {
                 id="phone"
                 name="phone"
                 placeholder="Enter your phone number"
-                className="w-full py-4 px-3 bg-white text-black rounded-md"
+                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md"
                 value={formData.phone}
                 onChange={handleInputChange}
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="block text-xl font-medium">
+              <label htmlFor="email" className="block text-sm md:text-xl font-medium">
                 Email ID
               </label>
               <input
@@ -106,13 +106,13 @@ export default function ContactMe() {
                 id="email"
                 name="email"
                 placeholder="Enter your email address"
-                className="w-full py-4 px-3 bg-white text-black rounded-md"
+                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md"
                 value={formData.email}
                 onChange={handleInputChange}
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="service" className="block text-xl font-medium">
+              <label htmlFor="service" className="block text-sm md:text-xl font-medium">
                 What service do you need?
               </label>
               <input
@@ -120,15 +120,15 @@ export default function ContactMe() {
                 id="service"
                 name="service"
                 placeholder="Enter the service you need"
-                className="w-full py-4 px-3 bg-white text-black rounded-md"
+                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md"
                 value={formData.service}
                 onChange={handleInputChange}
               />
             </div>
-            <div className="w-1/2 mx-auto mt-5">
+            <div className="w-10/12 mx-auto mt-5">
               <button
                 type="submit"
-                className="bg-[#FF8E5E] text-white py-2 px-2 rounded-2xl mx-auto w-full text-2xl font-semibold"
+                className="bg-[#FF8E5E] text-white py-2 px-2 rounded-2xl mx-auto w-full text-lg md:text-2xl font-semibold"
               >
                 Submit
               </button>
