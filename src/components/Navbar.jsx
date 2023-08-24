@@ -20,6 +20,10 @@ export default function Navbar({ user, setRender, setUser }) {
       name: "Skills",
       route: "skillSection",
     },
+    {
+      name: "Services",
+      route: "servicesOffered",
+    },
   ];
 
   return (

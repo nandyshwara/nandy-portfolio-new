@@ -68,12 +68,8 @@ export default function Portfolio() {
   return (
     <div className="py-10" id="portfolio">
       <Container>
-        <div className="text-6xl text-center font-bold">
-          <p className="text-color-one">I create websites</p>
-          <p className="text-color-two">that drags user's attention</p>
-        </div>
         <div className="text-5xl font-semibold py-10 text-center">
-          <p className="text-color-two">
+          <p className="text-color-two pb-10">
             My <span className="text-color-one">Works</span>
           </p>
           <div className="flex flex-col w-full gap-y-10 mt-10">
