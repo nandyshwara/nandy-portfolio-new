@@ -35,7 +35,7 @@ export default function MyServices() {
     <div className="mt-10 pb-10" id="servicesOffered">
       <Container>
         <p className="text-center text-color-one text-4xl font-semibold mb-10">Services<span className="text-color-two"> I Offer</span></p>
-        <div className="w-1/2 mx-auto flex flex-row gap-x-10">
+        <div className="w-full md:w-1/2 mx-auto flex flex-col md:flex-row gap-10">
           {data.map((currEle, index) => {
             return (
               <div className="bg-white basis-1/2 rounded-2xl pb-5 transition-transform transform-gpu hover:scale-105 cursor-pointer">
