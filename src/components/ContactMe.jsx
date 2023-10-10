@@ -66,10 +66,9 @@ export default function ContactMe() {
         <h2 className="text-4xl font-semibold mb-6 text-color-two text-center">
           Contact Me
         </h2>
-
-        <div className="bg-[#19191D] py-10 px-10 text-white mt-10 w-full md:w-1/2 mx-auto rounded-2xl">
+        <div className="bg-[#FFFFFF] border-2 border-[#CE9FFC] py-20 px-10 text-color-two mt-10 w-full md:w-1/2 mx-auto rounded-2xl">
           <form onSubmit={handleSubmit} id="contactForm">
-            <div className="mb-4">
+            <div className="mb-5">
               <label htmlFor="name" className="block text-sm md:text-xl font-medium">
                 Name
               </label>
@@ -83,7 +82,7 @@ export default function ContactMe() {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-5">
               <label htmlFor="phone" className="block text-sm md:text-xl font-medium">
                 Phone Number
               </label>
@@ -97,7 +96,7 @@ export default function ContactMe() {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-5">
               <label htmlFor="email" className="block text-sm md:text-xl font-medium">
                 Email ID
               </label>
@@ -111,7 +110,7 @@ export default function ContactMe() {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-5">
               <label htmlFor="service" className="block text-sm md:text-xl font-medium">
                 What service do you need?
               </label>
@@ -120,7 +119,7 @@ export default function ContactMe() {
                 id="service"
                 name="service"
                 placeholder="Enter the service you need"
-                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md"
+                className="w-full py-2 px-1 md:py-4 md:px-3 bg-white text-black rounded-md border-1 border-[#CE9FFC]"
                 value={formData.service}
                 onChange={handleInputChange}
               />
@@ -128,7 +127,7 @@ export default function ContactMe() {
             <div className="w-10/12 mx-auto mt-5">
               <button
                 type="submit"
-                className="bg-[#FF8E5E] text-white py-2 px-2 rounded-2xl mx-auto w-full text-lg md:text-2xl font-semibold"
+                className="bg-[#CE9FFC] text-color-one py-2 px-2 rounded-2xl mx-auto w-full text-lg md:text-2xl font-semibold"
               >
                 Submit
               </button>

@@ -4,116 +4,92 @@ import portfolioImage1 from "../assets/imgs/biAcademyImage.png";
 import portfolioImage2 from "../assets/imgs/tryRabbitImage.png";
 import portfolioImage3 from "../assets/imgs/akshayPortfolioImage.png";
 import portfolioImage4 from "../assets/imgs/sharavariPortfolioImage.png";
-import circleImage from "../assets/svgs/circle.svg";
-import { Slide } from "react-awesome-reveal";
+import portfolioImage5 from "../assets/imgs/Vidiotics.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 export default function Portfolio() {
   const projectData = [
     {
       image: portfolioImage1,
       title: "Bi Academy",
-      description:
-        "It is Half LMS and Course Landing Page , which have E-books and mock tests included.Here they sell various courses and career assistance services and mocket tests.Complete Branding ,Content writing , Design , Development(front-end and Back-end) , Deployment has been done.I have implemented both payment and whatsapp integration as well.",
-      toolsUsed: [
-        "Figma",
-        "React JS",
-        "Node JS",
-        "Mongo DB",
-        "Cloudinary",
-        "Razorpay",
-        "Twilio",
-        "TailwindCSS",
-      ],
     },
     {
       image: portfolioImage2,
       title: "TryRabbit",
-      description:
-        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
-      toolsUsed: [
-        "React JS",
-        "Node JS",
-        "Mongo DB",
-        "Cloudinary",
-        "TailwindCSS",
-      ],
     },
     {
-      title: "Akshay Portfolio Website",
+      image: portfolioImage5,
+      title: "Vidiotics",
+    },
+    {
+      title: "Akshay Portfolio",
       image: portfolioImage3,
-      description:
-        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
-      toolsUsed: [
-        "React JS",
-        "Node JS",
-        "Mongo DB",
-        "Cloudinary",
-        "TailwindCSS",
-      ],
     },
     {
-      title: "Sharavari Portfolio Website",
+      title: "Sharavari Portfolio",
       image: portfolioImage4,
-      description:
-        "TryRabbit is Ai tools Listing Platform and provide various services on pricing plan , I have also implement blog page here.As client gave me the FIgma Design , I have taken care of the entire website development",
-      toolsUsed: [
-        "React JS",
-        "Node JS",
-        "Mongo DB",
-        "Cloudinary",
-        "TailwindCSS",
-      ],
     },
   ];
 
   return (
-    <div className="py-5 md:py-10" id="portfolio">
+    <div className="py-5 md:py-5" id="portfolio">
       <Container>
-        <div className="text-2xl md:text-5xl font-semibold py-5 md:py-10 text-center">
+        <div className="text-2xl md:text-5xl font-semibold text-center">
           <p className="text-color-two pb-2 md:pb-10">
             My <span className="text-color-one">Works</span>
           </p>
-          <div className="flex flex-col w-full gap-y-10 mt-10">
-            {projectData.map((currEle, index) => {
-              return (
-                <Slide duration={1500}>
-                  <div className="bg-[#19191D] w-10/12 border border-[#FF8E5E] flex flex-col md:flex-row py-10 px-5 mx-auto rounded-2xl transition-transform transform-gpu hover:scale-105 cursor-pointer">
-                    <div className="basis-1/2 md:h-[300px] md:w-[400px] my-auto">
+          <div className="w-11/12 mx-auto">
+            <Carousel
+            renderIndicator={false}
+              renderArrowPrev={(clickHandler, hasPrev) => {
+                return (
+                  <div
+                    className={`${
+                      hasPrev ? "absolute" : "hidden"
+                    } top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-100 hover:opacity-30 cursor-pointer z-20`}
+                    onClick={clickHandler}
+                  >
+                    <AiOutlineArrowLeft className="w-9 h-9 text-white" />
+                  </div>
+                );
+              }}
+              renderArrowNext={(clickHandler, hasNext) => {
+                return (
+                  <div
+                    className={`${
+                      hasNext ? "absolute" : "hidden"
+                    } top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-100 hover:opacity-30 cursor-pointer z-20`}
+                    onClick={clickHandler}
+                  >
+                    <AiOutlineArrowRight className="w-9 h-9 text-white" />
+                  </div>
+                );
+              }}
+              swipeable={true}
+              className="px-1 sm:px-10"
+            >
+              {projectData.map((currEle, index) => {
+                return (
+                  <div className="w-7/12 mx-auto">
+                    <div className="my-10">
                       <img
-                        className="w-full h-full my-auto"
+                        className="w-full h-full my-auto rounded-xl shadow-2xl shadow-[#4C0182]"
                         src={currEle.image}
                         alt={currEle.image}
                       />
                     </div>
-                    <div className="basis-1/2">
-                      <p className="text-xl mt-2 md:mt-0 md:text-4xl font-semibold text-color-one">
+                    <div className="">
+                      <p className="text-xl mt-2 md:mt-0 md:text-3xl font-semibold text-color-one">
                         {currEle.title}
                       </p>
-                      <p className="text-xs md:text-sm font-normal text-color-two text-left mt-2 md:mt-10 px-3 md:px-10">
-                        {currEle.description}
-                      </p>
-                      <p className="text-color-one text-xs md:text-xl font-bold text-left px-5 md:px-10 pt-5">
-                        Tools And Technologies Used:
-                      </p>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 md:gap-x-10 gap-y-6 md:gap-y-5 mt-5 text-color-two px-3 md:px-10 py-2 md:py-1">
-                        {currEle.toolsUsed.map((element) => {
-                          return (
-                            <div className="h-2 md:h-3 flex flex-row gap-2 smd:gap-5 text-xs">
-                              <img
-                                className="h-2 md:h-3"
-                                src={circleImage}
-                                alt="circleImage"
-                              />
-                              <p>{element}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
                     </div>
                   </div>
-                </Slide>
-              );
-            })}
+                );
+              })}
+            </Carousel>
           </div>
         </div>
       </Container>
