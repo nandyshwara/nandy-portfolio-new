@@ -6,7 +6,7 @@ import vidiotics from "../assets/imgs/VidioticsLogo.png";
 
 export default function Clients() {
   return (
-    <div className="hidden md:flex mt-1 mb-0 pb-10">
+    <div className="hidden md:flex flex-col mt-1 mb-0 pb-10">
       <p className="text-xl md:text-6xl font-semibold text-color-one text-center pb-10">
         Organizations And Clients
       </p>

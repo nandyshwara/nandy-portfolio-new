@@ -30,8 +30,8 @@ export default function Navbar({ user, setRender, setUser }) {
       <div>
         <Container>
           <div className="w-10/12 mx-auto my-10">
-            <div className="flex justify-between items-center h-20 md:gap-10 lg:gap-0 text-color-two">
-              <p className="text-color-one text-3xl font-semibold ml-12 md:ml-0">NANDYSHWARA</p>
+            <div className="md:flex md:justify-between md:items-center md:h-20 md:gap-10 lg:gap-0 text-color-two">
+              <p className="md:flex text-color-one text-3xl font-semibold text-center md:ml-0">NANDYSHWARA</p>
               <div className="hidden md:flex flex-row items-center space-x-10 text-2xl font-semibold text-color-one">
                 {navOptions.map((currElem, index) => (
                   <Link

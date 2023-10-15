@@ -1,5 +1,6 @@
 import Container from "./Container";
 import whyMe from "../assets/svgs/WhyChooseME.svg"
+import whyMeMobile from "../assets/svgs/WhyChooseMeMobile.svg"
 export default function SkillsSection() {
   
   return (
@@ -9,7 +10,8 @@ export default function SkillsSection() {
             <p className="text-2xl md:text-6xl font-semibold text-color-two text-center mb-20">
               Why Choose <span className="text-color-one">Me</span>
             </p>
-            <img src={whyMe} alt="whyMe"/>
+            <img className="hidden md:flex" src={whyMe} alt="whyMe"/>
+            <img className="md:hidden" src={whyMeMobile} alt="whyMe"/>
           </div>
         </Container>
       </div>
